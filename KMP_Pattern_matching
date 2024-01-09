@@ -1,5 +1,6 @@
 int n = txt.size(), m = pat.size(), j = 0;
             vector<int>lps(m, 0), vct;
+                                                          //LPS table creation
             for (int i = 1 ; i < m ;) {
                 if (pat[i] == pat[j]) {
                     lps[i] = j + 1;
@@ -16,6 +17,7 @@ int n = txt.size(), m = pat.size(), j = 0;
                     }
                 }
             }
+                                                     // matching both strings
             j = 0;
             for (int i = 0 ; i < n ;) {
                 
